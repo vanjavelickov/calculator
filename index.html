@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html class="primary-theme">
+
+<head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <title>Quantox</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="module" src="script.js"></script>
+    <link rel="icon" type="image/png" href="assets/favicon-32x32.png" />
+</head>
+
+<body>
+    <div id="container" class="container">
+        <div class="item-1">
+            <div class="header">
+                <h1 class="title">calc</h1>
+                <div class="theme-wrapper">
+                    <span class="theme">theme</span>
+                    <div class="slide-container">
+                        <div class="slide-numbers">
+                            <span class="slider-text">1</span>
+                            <span class="slider-text">2</span>
+                            <span class="slider-text">3</span>
+                        </div>
+                    </div>
+                    <div class="range">
+                        <input type="range" min="1" max="3" value="1" class="slider" id="slider">
+                    </div>
+                </div>
+            </div>
+
+            <form id="form" class="form-design" autocomplete="off" novalidate>
+                <input id="calculator" class="calculator-class" name="calculator" type="text" required>
+            </form>
+            <div class="calculator-body">
+                <button class="btn-accent seven" type="button" id="seven">7</button>
+                <button class="btn-accent eight" type="button" id="eight">8</button>
+                <button class="btn-accent nine" type="button" id="nine">9</button>
+                <button class="btn-primary del" type="button" id="del">del</button>
+                <button class="btn-accent four" type="button" id="four">4</button>
+                <button class="btn-accent five" type="button" id="five">5</button>
+                <button class="btn-accent six" type="button" id="six">6</button>
+                <button class="btn-accent addition" type="button" id="addition">+</button>
+                <button class="btn-accent one" type="button" id="one">1</button>
+                <button class="btn-accent two" type="button" id="two">2</button>
+                <button class="btn-accent three" type="button" id="three">3</button>
+                <button class="btn-accent subtraction" type="button" id="subtraction">-</button>
+                <button class="btn-accent point" type="button" id="point">.</button>
+                <button class="btn-accent zero" type="button" id="zero">0</button>
+                <button class="btn-accent division" type="button" id="division">/</button>
+                <button class="btn-accent multiplication" type="button" id="multiplication">x</button>
+                <button class="btn-primary reset" type="button" id="reset">reset</button>
+                <button class="btn-secondary equal" type="button" id="equal">=</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
