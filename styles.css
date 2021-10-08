@@ -1,0 +1,337 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Spartan', sans-serif;
+    font-size: 32px;
+    background-color: var(--background-color);
+    /* - Weights: 700 */
+    /* - Mobile: 375px
+- Desktop: 1440px */
+}
+
+.primary-theme {
+    --background-color: hsl(222, 26%, 31%);
+    --background-keypad: hsl(223, 31%, 20%);
+    --background-screen: hsl(224, 36%, 15%);
+    --primary: hsl(225, 21%, 49%);
+    --secondary: hsl(224, 28%, 35%);
+    --accent: hsl(6, 63%, 50%);
+    --dark-accent: hsl(6, 70%, 34%);
+    --light: hsl(30, 25%, 89%);
+    --greyisch: hsl(28, 16%, 65%);
+    --dark: hsl(221, 14%, 31%);
+    --white-color: hsl(0, 0, 100%);
+}
+
+.secondary-theme {
+    --background-color: hsl(0, 0%, 90%);
+    --background-keypad: hsl(0, 5%, 81%);
+    --background-screen: hsl(0, 0%, 93%);
+    --primary: hsl(185, 42%, 37%);
+    --secondary: hsl(185, 58%, 25%);
+    --accent: hsl(25, 98%, 40%);
+    --dark-accent: hsl(25, 99%, 27%);
+    --light: hsl(45, 7%, 89%);
+    --greyisch: hsl(35, 11%, 61%);
+    --dark: hsl(60, 10%, 19%);
+    --white-color: hsl(0, 0, 100%);
+}
+
+.accent-theme {
+    --background-color: hsl(268, 75%, 9%);
+    --background-keypad: hsl(268, 71%, 12%);
+    --background-screen: hsl(281, 89%, 26%);
+    --primary: hsl(285, 91%, 52%);
+    --secondary: hsl(176, 100%, 44%);
+    --accent: hsl(177, 92%, 70%);
+    --dark-accent: hsl(268, 47%, 21%);
+    --light: hsl(290, 70%, 36%);
+    --greyisch: hsl(52, 100%, 62%);
+    --dark: hsl(198, 20%, 13%);
+    --white-color: hsl(0, 0, 100%);
+}
+
+.title {
+    color: var(--white-color);
+}
+
+.btn-primary {
+    text-transform: uppercase;
+    cursor: pointer;
+    font-family: 'Spartan', sans-serif;
+    background: var(--primary);
+    color: white;
+    font-size: 20px;
+    border-radius: 10px;
+    text-align: center;
+    white-space: nowrap;
+    padding-top: 11px;
+    padding-bottom: 13px;
+    padding-left: 14px;
+    padding-right: 13px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 1px;
+    box-shadow: inset 0px -4px 0px var(--secondary);
+}
+
+.btn-secondary {
+    cursor: pointer;
+    font-family: 'Spartan', sans-serif;
+    background: var(--accent);
+    color: white;
+    text-align: center;
+    white-space: nowrap;
+    padding-top: 11px;
+    padding-bottom: 12px;
+    padding-left: 24px;
+    padding-right: 24px;
+    box-shadow: inset 0px -4px 0px var(--dark-accent);
+    border-radius: 10px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.btn-accent {
+    cursor: pointer;
+    font-family: 'Spartan', sans-serif;
+    background: var(--light);
+    white-space: nowrap;
+    padding-top: 10px;
+    padding-bottom: 14px;
+    padding-left: 14px;
+    padding-right: 13px;
+    box-shadow: inset 0px -4px 0px var(--greyisch);
+    border-radius: 10px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 1px;
+    color: var(--dark);
+}
+
+.btn-accent:hover {
+    background-color: var(--greyisch);
+    box-shadow: inset 0px -4px 0px var(--greyisch);
+}
+
+
+
+.container {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: minmax(50px, 450px) minmax(327px, 1fr) minmax(50px, 450px);
+    grid-template-rows: minmax(50px, 144px) 1fr minmax(50px, 145px);
+    height: 100vh;
+    grid-template-areas: ". . ."
+        ". calc ."
+        ". . .";
+}
+
+.item-1 {
+    justify-self: stretch;
+    grid-area: calc;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.theme-wrapper {
+    align-self: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+        ". numbers"
+        "theme range";
+}
+
+.theme {
+    grid-area: theme;
+    align-self: center;
+    text-transform: uppercase;
+    font-family: Spartan;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 13px;
+    text-align: center;
+    letter-spacing: 1px;
+    color: var(--greyisch);
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 70px;
+    border-radius: 5px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider:hover {
+    opacity: 1;
+    /* promeniti boju na hover */
+}
+
+.slide-container {
+    grid-area: numbers;
+    align-self: end;
+    display: flex;
+    flex-direction: column;
+}
+
+.slide-numbers {
+    margin-left: 3px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.slider-text {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 13px;
+    text-align: center;
+}
+
+.range {
+    grid-area: range;
+}
+
+.calculator-class {
+    width: 100%;
+    min-height: 128px;
+    cursor: pointer;
+    border: none;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 25px;
+    background-color: var(--background-screen);
+    color: var(--light);
+    border-radius: 10px;
+}
+
+input:focus {
+    outline: none;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 54px;
+    text-align: right;
+    letter-spacing: -0.8px;
+}
+
+.calculator-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+        "seven eight nine del"
+        "four five six addition"
+        "one two three subtraction"
+        "point zero division multiplication"
+        "reset reset equal equal"
+    ;
+    gap: 24px;
+
+}
+
+.seven {
+    grid-area: seven;
+}
+
+.eight {
+    grid-area: eight;
+}
+
+.nine {
+    grid-area: nine;
+}
+
+.del {
+    grid-area: del;
+}
+
+.four {
+    grid-area: four;
+}
+
+.five {
+    grid-area: five;
+}
+
+.six {
+    grid-area: six;
+}
+
+.addition {
+    grid-area: addition;
+}
+
+.one {
+    grid-area: one;
+}
+
+.two {
+    grid-area: two;
+}
+
+.three {
+    grid-area: three;
+}
+
+.subtraction {
+    grid-area: subtraction;
+}
+
+.point {
+    grid-area: point;
+}
+
+.zero {
+    grid-area: zero;
+}
+
+.division {
+    grid-area: division;
+}
+
+.multiplication {
+    grid-area: multiplication;
+}
+
+.reset {
+    grid-area: reset;
+}
+
+.equal {
+    grid-area: equal;
+}
