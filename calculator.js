@@ -97,7 +97,7 @@ export class Calculator {
                         break;
                     } 
             }
-
+            this.result = this.result.toFixed(3);
             this.calculatorDisplay.innerHTML = this.result;
         }
         this.previousOperation = this.operation;
