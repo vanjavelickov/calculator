@@ -8,8 +8,6 @@ import {
 
 export class Calculator {
     constructor() {
-        this.slider = document.getElementById('slider');
-        this.slider.onchange = () => this.changeTheme(this.slider.value);
         this.calculatorDisplay = document.getElementById('calculator');
         this.initializeNumbers();
         this.initializeOperators();
@@ -36,19 +34,6 @@ export class Calculator {
         });
 
     }
-
-    changeTheme(value) {
-        if (value === '1') {
-            document.documentElement.className = 'primary-theme';
-        }
-        if (value === '2') {
-            document.documentElement.className = 'secondary-theme';
-        }
-        if (value === '3') {
-            document.documentElement.className = 'accent-theme';
-        }
-    }
-
 
     updateNumber(value) {
         if (this.allowNumber) {
